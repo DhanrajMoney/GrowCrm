@@ -64,19 +64,19 @@ For deep architectural details, see [architecture.md](architecture.md).
 
 ## 🛠 Tech Stack & Architecture
 
-- **Backend Framework**: [Laravel 8.x](https://laravel.com/) (PHP `>= 7.2.5`, supports PHP 7.4 / 8.0)
+- **Backend Framework**: [Laravel 11.x](https://laravel.com/) (running on Laravel 11.57.0, PHP `>= 8.2`, tested on PHP 8.4)
 - **Database**: MySQL 5.7+ / MariaDB 10.2+
 - **Frontend Layer**: Blade Templates, Bootstrap 4, jQuery, Noty.js, Pickadate, Dropzone, Select2
 - **Dynamic Engine**: Proprietary `NXAJAX` Server-Driven UI engine (`public/js/core/ajax.js`)
-- **Modularity**: `nwidart/laravel-modules` for pluggable modules (`application/Modules/`)
-- **PDF Engine**: `barryvdh/laravel-dompdf`
+- **Modularity**: `nwidart/laravel-modules` v11 (`application/Modules/`)
+- **PDF Engine**: `barryvdh/laravel-dompdf` v3.1
 
 ---
 
 ## 📋 System Requirements
 
 ### Server & PHP
-- **PHP**: `^7.2.5 || ^8.0`
+- **PHP**: `^8.2 || ^8.3 || ^8.4`
 - **Required PHP Extensions**:
   - `BCMath`
   - `Ctype`

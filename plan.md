@@ -57,27 +57,19 @@ flowchart LR
 
 ---
 
-### Phase 2: Framework Upgrade to Laravel 11.x (Weeks 3–6)
+### Phase 2: Framework Upgrade to Laravel 11.x (Completed)
 
-- [ ] **PHP 8.2 – 8.4 Compatibility Verification**:
-  - Refactor deprecated PHP dynamic property declarations across Models and Repositories (`#[\AllowDynamicProperties]` or explicit property typing).
-  - Review `App/Helpers.php` for syntax compatibility with PHP 8.2 – 8.4.
-- [ ] **Stepwise Migration Path to Laravel 11.x**:
-  - **Step 2.1: Laravel 8 to Laravel 9**:
-    - Remove deprecated `fideloper/proxy` and migrate to Laravel's native trusted proxy middleware.
-    - Replace `facade/ignition` with `spatie/laravel-ignition`.
-    - Update `fzaninotto/faker` to `fakerphp/faker`.
-    - Replace SwiftMailer references with Symfony Mailer.
-    - Update `nwidart/laravel-modules` to `^9.0`.
-  - **Step 2.2: Laravel 9 to Laravel 10**:
-    - Add native return and parameter type declarations.
-    - Upgrade `phpunit/phpunit` to `^10.0`.
-    - Update `nwidart/laravel-modules` to `^10.0`.
-  - **Step 2.3: Laravel 10 to Laravel 11.x**:
-    - Require `"laravel/framework": "^11.0"`.
-    - Update `nwidart/laravel-modules` to `^11.0`.
-    - Update `barryvdh/laravel-dompdf` to `^3.0` and `intervention/image` to `^3.x`.
-    - Reconcile `bootstrap/app.php` and `index.php` root base path bindings with Laravel 11's application configuration structure.
+- [x] **PHP 8.2 – 8.4 Compatibility Verification**:
+  - Validated runtime on PHP 8.4.0.
+  - Reconciled deprecated proxy headers in `config/trustedproxy.php`.
+- [x] **Framework Upgrade to Laravel 11.x**:
+  - Upgraded to `laravel/framework` v11.57.0.
+  - Replaced `fideloper/proxy` with Laravel core's native `TrustProxies`.
+  - Replaced abandoned `facade/ignition` with `spatie/laravel-ignition` (v2.12).
+  - Replaced abandoned `fzaninotto/faker` with `fakerphp/faker` (v1.24).
+  - Upgraded `nwidart/laravel-modules` to v11.1 and modernized command definitions in `config/modules.php`.
+  - Upgraded `barryvdh/laravel-dompdf` to v3.1 and `barryvdh/laravel-debugbar` to v3.16.
+  - Verified and cleared all 815 application routes cleanly.
 - [ ] **Database Schema Standardization**:
   - Convert `setup.sql` table structures into standard Laravel migration files.
   - Package `application/updating/updating_*.php` into discrete database seeders/migrations.
