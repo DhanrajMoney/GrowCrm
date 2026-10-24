@@ -1,0 +1,67 @@
+{
+  "type": "module",
+  "menus": {
+    "main": [
+      {
+        "type": "single",
+        "parent": "main_menu_team",
+        "user_type": "all",
+        "team_role": "admin",
+        "data": [
+          {
+            "type": "standard-link",
+            "id_li": "module_li_designspecification",
+            "id_a": "module_a_designspecification",
+            "name": "designspecification::lang.specification",
+            "href": "/modules/designspecification",
+            "url_title": null,
+            "title": "designspecification::lang.specifications",
+            "icon": "ti-write"
+          }
+        ]
+      },
+      {
+        "type": "single",
+        "parent": "main_menu_client",
+        "user_type": "all",
+        "team_role": "",
+        "data": [
+          {
+            "type": "standard-link",
+            "id_li": "module_li_designspecification",
+            "id_a": "module_a_designspecification",
+            "name": "designspecification::lang.specification",
+            "href": "/modules/designspecification",
+            "url_title": null,
+            "title": "designspecification::lang.specifications",
+            "icon": "ti-write"
+          }
+        ]
+      }
+    ],
+
+    "project_tabs": [
+      {
+        "type": "single",
+        "parent": "project_tabs_menu",
+        "user_type": "all",
+        "team_role": "admin",
+        "data": [
+          {
+            "type": "ajax-link",
+            "id_li": "menu_specifications",
+            "id_a": "link_menu_specifications",
+            "classes_li": "some-link-class",
+            "classes_a": "some-a-class",
+            "name": "designspecification::lang.specification",
+            "href": "/modules/specifications?resource_id={id}&resource_type=project",
+            "title": "designspecification::lang.specification",
+            "url_title": "designspecification::lang.specification",
+            "target": "plainModal",
+            "icon": "ti-move"
+          }
+        ]
+      }
+    ]
+  }
+}

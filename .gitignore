@@ -1,0 +1,63 @@
+# Composer & PHP Dependencies
+/vendor/
+**/vendor/
+composer.phar
+
+# Node & Frontend Dependencies
+/node_modules/
+**/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment Files
+.env
+.env.backup
+.env.*
+!.env.example
+
+# Laravel Runtime & Cache
+/application/storage/*.key
+/application/storage/app/*
+!/application/storage/app/public/
+!/application/storage/app/.gitignore
+/application/storage/cache/*
+/application/storage/debugbar/*
+/application/storage/framework/cache/*
+!/application/storage/framework/cache/.gitignore
+/application/storage/framework/sessions/*
+!/application/storage/framework/sessions/.gitignore
+/application/storage/framework/views/*
+!/application/storage/framework/views/.gitignore
+/application/storage/framework/testing/*
+/application/storage/logs/*
+!/application/storage/logs/.gitignore
+/application/bootstrap/cache/*
+!/application/bootstrap/cache/.gitignore
+
+# Grow CRM User Uploaded Files (preserve directory structure, exclude uploads)
+/storage/avatars/*
+!/storage/avatars/system/
+!/storage/avatars/.gitignore
+/storage/files/*
+!/storage/files/.gitignore
+/storage/temp/*
+!/storage/temp/.gitignore
+/storage/logos/clients/*
+!/storage/logos/clients/.gitignore
+/storage/storage/temp/*
+
+# Updates directory (temporary update packages)
+/updates/*
+!/updates/.gitignore
+
+# IDE & OS Files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store

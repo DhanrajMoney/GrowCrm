@@ -1,0 +1,15 @@
+{
+  "name": "DesignSpecification",
+  "alias": "Design Specification",
+  "description": "",
+  "keywords": [],
+  "priority": 0,
+  "providers": [
+    "Modules\\DesignSpecification\\Providers\\DesignSpecificationServiceProvider"
+  ],
+  "aliases": {},
+  "files": [
+    "Helpers\\Helpers.php"
+  ],
+  "requires": []
+}
