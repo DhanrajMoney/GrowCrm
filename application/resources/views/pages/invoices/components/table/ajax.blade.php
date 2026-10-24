@@ -14,7 +14,7 @@
     </td>
     @endif
     <td class="invoices_col_id" id="invoices_col_id_{{ $invoice->bill_invoiceid }}">
-        <a href="/invoices/{{ $invoice->bill_invoiceid }}">
+        <a href="{{ _url('/invoices') }}/{{ $invoice->bill_invoiceid  }}">
             {{ $invoice->formatted_bill_invoiceid }} </a>
         <!--recurring-->
         @if(auth()->user()->is_team && $invoice->bill_recurring == 'yes')
@@ -33,12 +33,12 @@
     </td>
     @if(config('visibility.invoices_col_client'))
     <td class="invoices_col_company" id="invoices_col_company_{{ $invoice->bill_invoiceid }}">
-        <a href="/clients/{{ $invoice->bill_clientid }}">{{ str_limit($invoice->client_company_name ?? '---', 12) }}</a>
+        <a href="{{ _url('/clients') }}/{{ $invoice->bill_clientid  }}">{{ str_limit($invoice->client_company_name ?? '---', 12) }}</a>
     </td>
     @endif
     @if(config('visibility.invoices_col_project'))
     <td class="invoices_col_project" id="invoices_col_project_{{ $invoice->bill_invoiceid }}">
-        <a href="/projects/{{ $invoice->bill_projectid }}">{{ str_limit($invoice->project_title ?? '---', 12) }}</a>
+        <a href="{{ _url('/projects') }}/{{ $invoice->bill_projectid  }}">{{ str_limit($invoice->project_title ?? '---', 12) }}</a>
     </td>
     @endif
 
@@ -96,12 +96,12 @@
             @endif
             <!--edit-->
             @if(config('visibility.action_buttons_edit'))
-            <a href="/invoices/{{ $invoice->bill_invoiceid }}/edit-invoice" title="{{ cleanLang(__('lang.edit')) }}"
+            <a href="{{ _url('/invoices') }}/{{ $invoice->bill_invoiceid  }}/edit-invoice" title="{{ cleanLang(__('lang.edit')) }}"
                 class="data-toggle-action-tooltip btn btn-outline-info btn-circle btn-sm">
                 <i class="sl-icon-note"></i>
             </a>
             @endif
-            <a href="/invoices/{{ $invoice->bill_invoiceid }}" title="{{ cleanLang(__('lang.view')) }}"
+            <a href="{{ _url('/invoices') }}/{{ $invoice->bill_invoiceid  }}" title="{{ cleanLang(__('lang.view')) }}"
                 class="data-toggle-action-tooltip btn btn-outline-info btn-circle btn-sm">
                 <i class="ti-new-window"></i>
             </a>

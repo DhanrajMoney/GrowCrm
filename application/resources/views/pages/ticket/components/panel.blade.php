@@ -29,7 +29,7 @@
                         <div class="x-list">
                             <div class="x-name">{{ cleanLang(__('lang.client')) }}</div>
                             <div class="x-details">
-                                <a href="/clients/{{ $ticket->ticket_clientid }}"
+                                <a href="{{ _url('/clients') }}/{{ $ticket->ticket_clientid  }}"
                                     title="{{ $ticket->client_company_name }}">{{ str_limit($ticket->client_company_name ?? '---', 35) }}</a>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="x-list">
                             <div class="x-name">{{ cleanLang(__('lang.project')) }}</div>
                             <div class="x-details">
-                                <a href="/projects/{{ $ticket->ticket_projectid }}"
+                                <a href="{{ _url('/projects') }}/{{ $ticket->ticket_projectid  }}"
                                     title="{{ $ticket->project_title }}">{{
                                     str_limit($ticket->project_title ?? '---', 30) }}</a></div>
                         </div>

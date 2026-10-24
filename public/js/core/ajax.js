@@ -384,6 +384,9 @@ function nxAjaxUxRequest(obj, virtualPostArray = {}) {
 
 		//require data
 		NXAJAX.data.url = obj.attr("data-url");
+		if (NXAJAX.data.url && NXAJAX.data.url.charAt(0) === '/' && NXAJAX.data.url.charAt(1) !== '/' && typeof NX !== 'undefined' && NX.site_url) {
+			NXAJAX.data.url = NX.site_url + NXAJAX.data.url;
+		}
 
 		//ajax request method type
 		if (typeof obj.attr("data-ajax-type") != 'undefined' && obj.attr("data-ajax-type") != '') {
@@ -988,6 +991,7 @@ function nxAjaxUxRequest(obj, virtualPostArray = {}) {
 			$('.modal').modal('hide');
 
 			//redirect
+			if (typeof payload === 'string' && payload.charAt(0) === '/' && payload.charAt(1) !== '/' && typeof NX !== 'undefined' && NX.site_url) { payload = NX.site_url + payload; }
 			window.location.replace(payload);
 
 			//progress bar start
@@ -1025,6 +1029,7 @@ function nxAjaxUxRequest(obj, virtualPostArray = {}) {
 			}
 
 			//redirect
+			if (typeof payload === 'string' && payload.charAt(0) === '/' && payload.charAt(1) !== '/' && typeof NX !== 'undefined' && NX.site_url) { payload = NX.site_url + payload; }
 			window.location.replace(payload);
 
 			//progress bar start

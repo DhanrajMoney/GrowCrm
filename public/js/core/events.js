@@ -19,7 +19,11 @@ $(document).ready(function () {
      *  [link on a div]
      * -------------------------------------------------------------------------------------------------*/
     $(document).on("click", ".click-url", function (e) {
-        window.location = $(this).attr("data-url");
+        var targetUrl = $(this).attr("data-url");
+		if (targetUrl && targetUrl.charAt(0) === '/' && targetUrl.charAt(1) !== '/' && typeof NX !== 'undefined' && NX.site_url) {
+			targetUrl = NX.site_url + targetUrl;
+		}
+		window.location = targetUrl;
     });
 
 

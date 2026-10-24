@@ -35,7 +35,7 @@
                 <i class="sl-icon-note"></i>
             </button>
             <!--view-->
-            <a href="/templates/projects/{{ $project->project_id }}" title="{{ cleanLang(__('lang.view')) }}"
+            <a href="{{ _url('/templates/projects') }}/{{ $project->project_id  }}" title="{{ cleanLang(__('lang.view')) }}"
                 class="data-toggle-action-tooltip btn btn-outline-info btn-circle btn-sm">
                 <i class="ti-new-window"></i>
             </a>

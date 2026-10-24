@@ -24,7 +24,7 @@
     </td>
     @if(config('visibility.payments_col_invoiceid'))
     <td class="payments_col_bill_invoiceid" id="payments_col_bill_invoiceid_{{ $payment->payment_id }}">
-        <a href="/invoices/{{ $payment->payment_invoiceid }}">{{ runtimeInvoiceIdFormat($payment->bill_invoiceid) }}</a>
+        <a href="{{ _url('/invoices') }}/{{ $payment->payment_invoiceid  }}">{{ runtimeInvoiceIdFormat($payment->bill_invoiceid) }}</a>
     </td>
     @endif
     <td class="payments_col_amount" id="payments_col_amount_{{ $payment->payment_id }}">
@@ -32,12 +32,12 @@
     @if(config('visibility.payments_col_client'))
     <td class="payments_col_client" id="payments_col_client_{{ $payment->payment_id }}">
         <a
-            href="/clients/{{ $payment->payment_clientid }}">{{ str_limit($payment->client_company_name ?? '---', 20) }}</a>
+            href="{{ _url('/clients') }}/{{ $payment->payment_clientid  }}">{{ str_limit($payment->client_company_name ?? '---', 20) }}</a>
     </td>
     @endif
     @if(config('visibility.payments_col_project'))
     <td class="payments_col_project" id="payments_col_project_{{ $payment->payment_id }}">
-        <a href="/projects/{{ $payment->payment_projectid }}">{{ str_limit($payment->project_title ?? '---', 25) }}</a>
+        <a href="{{ _url('/projects') }}/{{ $payment->payment_projectid  }}">{{ str_limit($payment->project_title ?? '---', 25) }}</a>
     </td>
     @endif
     <td class="payments_col_transaction hidden" id="payments_col_transaction_{{ $payment->payment_id }}">

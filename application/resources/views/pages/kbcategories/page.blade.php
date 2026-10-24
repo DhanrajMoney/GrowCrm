@@ -8,7 +8,7 @@
             <div class="col-lg-12">
                 <h2 class="text-info text-center">{{ cleanLang(__('lang.knowledgebase')) }}</h2>
                 <div class="text-center p-t-5 p-b-40 m-b-30">
-                    <h5 class="display-inline-block">{{ cleanLang(__('lang.get_help_from_knowledgebase')) }}</h5> <h5 class="display-inline-block"><a href="/tickets/create">You can also open a support ticket</a></h5>
+                    <h5 class="display-inline-block">{{ cleanLang(__('lang.get_help_from_knowledgebase')) }}</h5> <h5 class="display-inline-block"><a href="{{ _url('/tickets/create') }}">You can also open a support ticket</a></h5>
                 </div>
                 <div class="input-group hidden">
                     <input type="text" class="form-control" name="search_query" placeholder="{{ cleanLang(__('lang.search')) }}">

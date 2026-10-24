@@ -18,7 +18,7 @@
                         <tr>
                             <td class="text-center">{{ $project->project_id }}</td>
                             <td class="txt-oflo"><a
-                                    href="/projects/{{ $project->project_id }}">{{ str_limit($project->project_title ??'---', 20) }}</a>
+                                    href="{{ _url('/projects') }}/{{ $project->project_id  }}">{{ str_limit($project->project_title ??'---', 20) }}</a>
                             </td>
                             <td>{{ runtimeDate($project->project_date_due) }}</td>
                             <td><span class="text-success"><span

@@ -5,7 +5,7 @@
             role="tablist">
             <!--overview-->
             <li class="nav-item">
-                <a class="nav-link tabs-menu-item" href="/projects/{{ $project->project_id }}" role="tab"
+                <a class="nav-link tabs-menu-item" href="{{ _url('/projects') }}/{{ $project->project_id  }}" role="tab"
                     id="tabs-menu-overview">{{ cleanLang(__('lang.overview')) }}</a>
             </li>
             <!--details-->

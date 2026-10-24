@@ -14,10 +14,10 @@
     </td>
     @endif
     @if(config('visibility.tickets_col_id'))
-    <td class="tickets_col_id"><a href="/tickets/{{ $ticket->ticket_id }}">{{ $ticket->ticket_id }}</a></td>
+    <td class="tickets_col_id"><a href="{{ _url('/tickets') }}/{{ $ticket->ticket_id  }}">{{ $ticket->ticket_id }}</a></td>
     @endif
     <td class="tickets_col_subject">
-        <a href="/tickets/{{ $ticket->ticket_id }}">{{ str_limit($ticket->ticket_subject ?? '---', 35) }}</a>
+        <a href="{{ _url('/tickets') }}/{{ $ticket->ticket_id  }}">{{ str_limit($ticket->ticket_subject ?? '---', 35) }}</a>
     </td>
     @if(config('visibility.tickets_col_client'))
     <td class="tickets_col_client">
@@ -69,7 +69,7 @@
                 <i class="sl-icon-note"></i>
             </button>
             @endif
-            <a href="/tickets/{{ $ticket->ticket_id }}" title="{{ cleanLang(__('lang.view')) }}"
+            <a href="{{ _url('/tickets') }}/{{ $ticket->ticket_id  }}" title="{{ cleanLang(__('lang.view')) }}"
                 class="data-toggle-action-tooltip btn btn-outline-info btn-circle btn-sm">
                 <i class="ti-new-window"></i>
             </a>

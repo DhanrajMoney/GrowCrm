@@ -14,7 +14,7 @@
     </td>
     @endif
     <td class="estimates_col_id" id="estimates_col_id_{{ $estimate->bill_estimateid }}">
-        <a href="/estimates/{{ $estimate->bill_estimateid }}">{{ $estimate->formatted_bill_estimateid }}</a>
+        <a href="{{ _url('/estimates') }}/{{ $estimate->bill_estimateid  }}">{{ $estimate->formatted_bill_estimateid }}</a>
         <!--automation-->
         @if(auth()->user()->is_team && $estimate->estimate_automation_status == 'enabled')
         <span class="sl-icon-energy text-warning p-l-5" data-toggle="tooltip"
@@ -26,7 +26,7 @@
     </td>
     @if(config('visibility.estimates_col_client'))
     <td class="estimates_col_company" id="estimates_col_company_{{ $estimate->bill_estimateid }}">
-        <a href="/clients/{{ $estimate->bill_clientid }}">
+        <a href="{{ _url('/clients') }}/{{ $estimate->bill_clientid  }}">
             {{ str_limit($estimate->client_company_name ?? '---', 30) }}</a>
     </td>
     @endif
@@ -97,12 +97,12 @@
             @endif
             <!--edit-->
             @if(config('visibility.action_buttons_edit'))
-            <a href="/estimates/{{ $estimate->bill_estimateid }}/edit-estimate" title="{{ cleanLang(__('lang.edit')) }}"
+            <a href="{{ _url('/estimates') }}/{{ $estimate->bill_estimateid  }}/edit-estimate" title="{{ cleanLang(__('lang.edit')) }}"
                 class="data-toggle-action-tooltip btn btn-outline-info btn-circle btn-sm">
                 <i class="sl-icon-note"></i>
             </a>
             @endif
-            <a href="/estimates/{{ $estimate->bill_estimateid }}" title="{{ cleanLang(__('lang.view')) }}"
+            <a href="{{ _url('/estimates') }}/{{ $estimate->bill_estimateid  }}" title="{{ cleanLang(__('lang.view')) }}"
                 class="data-toggle-action-tooltip btn btn-outline-info btn-circle btn-sm">
                 <i class="ti-new-window"></i>
             </a>

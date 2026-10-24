@@ -3,7 +3,7 @@
 <tr id="client_{{ $client->client_id }}">
     <td class="clients_col_id" id="clients_col_id_{{ $client->client_id }}">{{ $client->client_id }}</td>
     <td class="clients_col_company" id="clients_col_id_{{ $client->client_id }}">
-        <a href="/clients/{{ $client->client_id ?? '' }}">{{ str_limit($client->client_company_name, 35) }}</a>
+        <a href="{{ _url('/clients') }}/{{ $client->client_id ?? ''  }}">{{ str_limit($client->client_company_name, 35) }}</a>
     </td>
     <td class="clients_col_account_owner" id="clients_col_account_owner_{{ $client->client_id }}">
         <img src="{{ getUsersAvatar($client->avatar_directory, $client->avatar_filename) }}" alt="user"
@@ -90,7 +90,7 @@
                 <i class="ti-email display-inline-block m-t-3"></i>
             </button>
 
-            <a href="/clients/{{ $client->client_id ?? '' }}" class="btn btn-outline-info btn-circle btn-sm">
+            <a href="{{ _url('/clients') }}/{{ $client->client_id ?? ''  }}" class="btn btn-outline-info btn-circle btn-sm">
                 <i class="ti-new-window"></i>
             </a>
         </span>

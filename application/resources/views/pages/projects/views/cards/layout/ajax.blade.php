@@ -62,7 +62,7 @@
                 <!--ID-->
                 <div class="projects_col_client p-l-3">
                     <span><strong>@lang('lang.client'):</strong> <a
-                            href="/clients/{{ $project->project_clientid }}">{{ str_limit($project->client_company_name ??'---', 30) }}</a></span>
+                            href="{{ _url('/clients') }}/{{ $project->project_clientid  }}">{{ str_limit($project->client_company_name ??'---', 30) }}</a></span>
                 </div>
 
                 <!--DATE CREATED-->

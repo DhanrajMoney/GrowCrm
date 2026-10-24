@@ -28,7 +28,7 @@
                                    </button>
                                    @endif
                                    <!--view-->
-                                   <a href="/invoices/{{ $invoice->bill_invoiceid }}"
+                                   <a href="{{ _url('/invoices') }}/{{ $invoice->bill_invoiceid  }}"
                                        title="{{ cleanLang(__('lang.view')) }}"
                                        class="subscription-invoice-button btn btn-outline-info btn-circle btn-sm">
                                        <i class="ti-new-window"></i>

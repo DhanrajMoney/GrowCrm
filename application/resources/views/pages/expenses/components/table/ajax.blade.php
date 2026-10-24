@@ -42,13 +42,13 @@
     @if(config('visibility.expenses_col_client'))
     <td class="expenses_col_client">
         <a
-            href="/clients/{{ $expense->expense_clientid }}">{{ str_limit($expense->client_company_name ?? '---', 12) }}</a>
+            href="{{ _url('/clients') }}/{{ $expense->expense_clientid  }}">{{ str_limit($expense->client_company_name ?? '---', 12) }}</a>
     </td>
     @endif
     <!--column visibility-->
     @if(config('visibility.expenses_col_project'))
     <td class="expenses_col_project">
-        <a href="/projects/{{ $expense->expense_projectid }}">{{ str_limit($expense->project_title ?? '---', 12) }}</a>
+        <a href="{{ _url('/projects') }}/{{ $expense->expense_projectid  }}">{{ str_limit($expense->project_title ?? '---', 12) }}</a>
     </td>
     @endif
     @if(config('visibility.expenses_col_amount'))

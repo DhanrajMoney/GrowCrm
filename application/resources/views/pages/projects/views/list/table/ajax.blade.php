@@ -26,7 +26,7 @@
     @if(config('visibility.projects_col_client'))
     <td class="projects_col_client">
         <a
-            href="/clients/{{ $project->project_clientid }}">{{ str_limit($project->client_company_name ??'---', 12) }}</a>
+            href="{{ _url('/clients') }}/{{ $project->project_clientid  }}">{{ str_limit($project->client_company_name ??'---', 12) }}</a>
     </td>
     @endif
     <td class="projects_col_start_date hidden">

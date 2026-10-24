@@ -55,7 +55,7 @@
         <!--[client details]-->
         @if(auth()->user()->is_team)
         <div class="p-b-20">
-            <h6><a href="/clients/{{ $project->client_id }}">{{ $project->client_company_name }}</a></h6>
+            <h6><a href="{{ _url('/clients') }}/{{ $project->client_id  }}">{{ $project->client_company_name }}</a></h6>
             <div>
                 @foreach($contacts as $contact)
                 <span data-toggle="tooltip" title="{{ $contact->first_name	}} {{ $contact->last_name	}}"><img

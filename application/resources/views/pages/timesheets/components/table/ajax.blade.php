@@ -35,9 +35,9 @@
     <td class="timesheets_col_related">
         @if($timesheet->timer_projectid > 0)
         <a
-            href="/projects/{{ $timesheet->timer_projectid }}">{{ str_limit($timesheet->project_title ?? '---', 25) }}</a>
+            href="{{ _url('/projects') }}/{{ $timesheet->timer_projectid  }}">{{ str_limit($timesheet->project_title ?? '---', 25) }}</a>
         @else
-        <a href="/leads/{{ $timesheet->timer_leadid }}">{{ str_limit($timesheet->lead_title ?? '---', 25) }}</a>
+        <a href="{{ _url('/leads') }}/{{ $timesheet->timer_leadid  }}">{{ str_limit($timesheet->lead_title ?? '---', 25) }}</a>
         @endif
     </td>
     @endif
