@@ -608,12 +608,12 @@ Route::group(['prefix' => 'settings/subscriptions'], function () {
     Route::put("/", "Settings\Subscriptions@update")->middleware(['demoModeCheck']);
 });
 
-//SETTINGS - UNITS
-Route::group(['prefix' => 'settings/units'], function () {
-    Route::get("/", "Settings\Units@index");
-    Route::put("/", "Settings\Units@update")->middleware(['demoModeCheck']);
-});
-Route::resource('settings/units', 'Settings\Units');
+// //SETTINGS - UNITS
+// // Route::group(['prefix' => 'settings/units'], function () {
+//     Route::get("/", "Settings\Units@index");
+//     Route::put("/", "Settings\Units@update")->middleware(['demoModeCheck']);
+// });
+// // Route::resource('settings/units', 'Settings\Units');
 
 //SETTINGS - TAX RATES
 Route::group(['prefix' => 'settings/taxrates'], function () {
@@ -927,11 +927,11 @@ Route::group(['prefix' => 'setup', 'as' => 'setup'], function () {
 });
 
 //UPDATING MODALS
-Route::group(['prefix' => 'updating'], function () {
-    //version 1.01 - January 2021
-    Route::get("/update-currency-settings", "Updating\Action@showUpdatingCurrencySetting");
-    Route::put("/update-currency-settings", "Updating\Action@updateUpdatingCurrencySetting");
-});
+// Route::group(['prefix' => 'updating'], function () {
+//     //version 1.01 - January 2021
+//     Route::get("/update-currency-settings", "Updating\Action@showUpdatingCurrencySetting");
+//     Route::put("/update-currency-settings", "Updating\Action@updateUpdatingCurrencySetting");
+// });
 
 //IMPORTING - COMMON
 Route::post("/import/uploadfiles", "Fileupload@uploadImportFiles");
@@ -984,10 +984,10 @@ Route::get("/appwebmail/prefill", "Webmail\Compose@prefillTemplate");
 //SETTINGS - CLIENT EMAIL TEMPLATES
 Route::resource('settings/webmail/templates', 'Settings\WebmailTemplates');
 
-//REPORTING
-Route::group(['prefix' => 'reports'], function () {
-    Route::get("/financial", "Reports\Financial@index");
-});
+// //REPORTING
+// Route::group(['prefix' => 'reports'], function () {
+//     Route::get("/financial", "Reports\Financial@index");
+// });
 
 
 /**----------------------------------------------------------------------------------------------------------------
