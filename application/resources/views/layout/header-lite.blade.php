@@ -12,7 +12,7 @@
     <title>{{ config('system.settings_company_name') }} {{ clean($page['meta_title'] ?? '') }}</title>
 
     <!--BASEURL-->
-    <base href="{{ url('/') }}" target="_self">
+    <base href="{{ rtrim(url('/'), '/') }}/" target="_self">
 
     <!--JQUERY & OTHER LITE JS-->
     <script src="public/vendor/js/vendor-lite.header.js?v={{ config('system.versioning') }}"></script>

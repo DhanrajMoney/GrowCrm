@@ -1,4 +1,4 @@
-<div class="boards count-{{ @count($tasks) }}" id="tasks-view-wrapper">
+<div class="boards count-{{ _count($tasks ?? null) }}" id="tasks-view-wrapper">
     <!--each board-->
     @foreach($boards as $board)
     <!--board-->

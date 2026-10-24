@@ -61,7 +61,7 @@ foreach ($paths as $key => $value) {
 }
 
 //check minimum php version
-if (version_compare(PHP_VERSION, '7.3.0', ">=") && version_compare(PHP_VERSION, '8.0.0', "<=")) {
+if (version_compare(PHP_VERSION, '7.3.0', ">=")) {
     $messages_php = '';
 } else {
     if (version_compare(PHP_VERSION, '7.3.0', "<") || version_compare(PHP_VERSION, '8.0.0', ">=")) {

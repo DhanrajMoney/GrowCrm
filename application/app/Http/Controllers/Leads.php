@@ -368,6 +368,7 @@ class Leads extends Controller {
         $payload = [
             'page' => $page,
             'boards' => $boards,
+            'leads' => $this->leadrepo->search(),
             'categories' => $categories,
             'stats' => $this->statsWidget(),
             'statuses' => \App\Models\LeadStatus::all(),

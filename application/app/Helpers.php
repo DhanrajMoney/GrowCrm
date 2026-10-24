@@ -1,6 +1,15 @@
 <?php
 
 /**
+ * null-safe count helper for PHP 8+
+ * @param mixed $var
+ * @return int
+ */
+function _count($var = null) {
+    return is_countable($var) ? count($var) : 0;
+}
+
+/**
  * Uses php uiniqid
  * @return string a very random unique id
  */

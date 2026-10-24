@@ -8,7 +8,7 @@
             @if(request('dashboard_section') == 'settings')
             <!--exist-->
             <div class="sidenav-menu-item exit-panel m-b-17">
-                <a class="waves-effect waves-dark text-info" href="/home" id="settings-exit-button"
+                <a class="waves-effect waves-dark text-info" href="{{ _url('/home') }}" id="settings-exit-button"
                     aria-expanded="false" target="_self">
                     <i class="sl-icon-logout text-info"></i>
                     <span id="settings-exit-text" class="font-14">{{ str_limit(__('lang.exit_settings'), 20) }}</span>
@@ -17,7 +17,7 @@
             @else
             <!--logo-->
             <div class="sidenav-menu-item logo m-t-0">
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" href="{{ _url('/home') }}">
                     <img src="{{ runtimeLogoSmall() }}" alt="homepage" class="logo-small" />
                     <img src="{{ runtimeLogoLarge() }}" alt="homepage" class="logo-large" />
                 </a>
@@ -179,7 +179,7 @@
                 <!-- settings -->
                 @if(auth()->user()->is_admin)
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-dark font-22 p-t-10 p-r-10" href="/settings" id="32"
+                    <a class="nav-link waves-effect waves-dark font-22 p-t-10 p-r-10" href="{{ _url('/settings') }}" id="32"
                         aria-expanded="false">
                         <i class="sl-icon-settings"></i>
                     </a>
@@ -516,7 +516,7 @@
 
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="/logout">
+                                <a href="{{ _url('/logout') }}">
                                     <i class="fa fa-power-off p-r-4"></i> {{ cleanLang(__('lang.logout')) }}</a>
                             </li>
                         </ul>

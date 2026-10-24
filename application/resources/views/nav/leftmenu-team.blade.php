@@ -15,7 +15,7 @@
                 <li data-modular-id="main_menu_team_home"
                     class="sidenav-menu-item {{ $page['mainmenu_home'] ?? '' }} menu-tooltip menu-with-tooltip"
                     title="{{ cleanLang(__('lang.home')) }}">
-                    <a class="waves-effect waves-dark" href="/home" aria-expanded="false" target="_self">
+                    <a class="waves-effect waves-dark" href="{{ _url('/home') }}" aria-expanded="false" target="_self">
                         <i class="ti-home"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.dashboard')) }}
                         </span>
@@ -38,20 +38,20 @@
                     <ul aria-expanded="false" class="collapse">
                         @if(config('visibility.modules.clients'))
                         <li class="sidenav-submenu {{ $page['submenu_customers'] ?? '' }}" id="submenu_clients">
-                            <a href="/clients"
+                            <a href="{{ _url('/clients') }}"
                                 class="{{ $page['submenu_customers'] ?? '' }}">{{ cleanLang(__('lang.clients')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.users'))
                         <li class="sidenav-submenu {{ $page['submenu_contacts'] ?? '' }}" id="submenu_contacts">
-                            <a href="/users"
+                            <a href="{{ _url('/users') }}"
                                 class="{{ $page['submenu_contacts'] ?? '' }}">{{ cleanLang(__('lang.client_users')) }}</a>
                         </li>
                         @endif
                         <!--contracts [hidden]-->
                         @if(config('visibility.modules.contracts.foo'))
                         <li class="sidenav-submenu {{ $page['submenu_contracts'] ?? '' }}" id="submenu_contracts">
-                            <a href="/contracts"
+                            <a href="{{ _url('/contracts') }}"
                                 class="{{ $page['submenu_contracts'] ?? '' }}">{{ cleanLang(__('lang.contracts')) }}</a>
                         </li>
                         @endif
@@ -99,7 +99,7 @@
                 <li data-modular-id="main_menu_team_tasks"
                     class="sidenav-menu-item {{ $page['mainmenu_tasks'] ?? '' }} menu-tooltip menu-with-tooltip"
                     title="{{ cleanLang(__('lang.tasks')) }}">
-                    <a class="waves-effect waves-dark" href="/tasks" aria-expanded="false" target="_self">
+                    <a class="waves-effect waves-dark" href="{{ _url('/tasks') }}" aria-expanded="false" target="_self">
                         <i class="ti-menu-alt"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.tasks')) }}
                         </span>
@@ -113,7 +113,7 @@
                 <li data-modular-id="main_menu_team_leads"
                     class="sidenav-menu-item {{ $page['mainmenu_leads'] ?? '' }} menu-tooltip menu-with-tooltip"
                     title="{{ cleanLang(__('lang.leads')) }}">
-                    <a class="waves-effect waves-dark" href="/leads" aria-expanded="false" target="_self">
+                    <a class="waves-effect waves-dark" href="{{ _url('/leads') }}" aria-expanded="false" target="_self">
                         <i class="sl-icon-call-in"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.leads')) }}
                         </span>
@@ -136,37 +136,37 @@
                     <ul aria-expanded="false" class="collapse">
                         @if(config('visibility.modules.invoices'))
                         <li class="sidenav-submenu {{ $page['submenu_invoices'] ?? '' }}" id="submenu_invoices">
-                            <a href="/invoices"
+                            <a href="{{ _url('/invoices') }}"
                                 class=" {{ $page['submenu_invoices'] ?? '' }}">{{ cleanLang(__('lang.invoices')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.payments'))
                         <li class="sidenav-submenu {{ $page['submenu_payments'] ?? '' }}" id="submenu_payments">
-                            <a href="/payments"
+                            <a href="{{ _url('/payments') }}"
                                 class=" {{ $page['submenu_payments'] ?? '' }}">{{ cleanLang(__('lang.payments')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.estimates'))
                         <li class="sidenav-submenu {{ $page['submenu_estimates'] ?? '' }}" id="submenu_estimates">
-                            <a href="/estimates"
+                            <a href="{{ _url('/estimates') }}"
                                 class=" {{ $page['submenu_estimates'] ?? '' }}">{{ cleanLang(__('lang.estimates')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.products'))
                         <li class="sidenav-submenu {{ $page['submenu_products'] ?? '' }}" id="submenu_products">
-                            <a href="/products"
+                            <a href="{{ _url('/products') }}"
                                 class=" {{ $page['submenu_products'] ?? '' }}">{{ cleanLang(__('lang.products')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.expenses'))
                         <li class="sidenav-submenu {{ $page['submenu_expenses'] ?? '' }}" id="submenu_expenses">
-                            <a href="/expenses"
+                            <a href="{{ _url('/expenses') }}"
                                 class=" {{ $page['submenu_expenses'] ?? '' }}">{{ cleanLang(__('lang.expenses')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.proposals'))
                         <li class="sidenav-submenu {{ $page['submenu_proposals'] ?? '' }}" id="submenu_proposals">
-                            <a href="/proposals"
+                            <a href="{{ _url('/proposals') }}"
                                 class=" {{ $page['submenu_proposals'] ?? '' }}">{{ cleanLang(__('lang.proposals')) }}</a>
                         </li>
                         @endif
@@ -213,7 +213,7 @@
                 <li data-modular-id="main_menu_team_subscriptions"
                     class="sidenav-menu-item {{ $page['mainmenu_subscription'] ?? '' }} menu-tooltip menu-with-tooltip"
                     title="{{ cleanLang(__('lang.subscriptions')) }}">
-                    <a class="waves-effect waves-dark p-r-20" href="/subscriptions" aria-expanded="false"
+                    <a class="waves-effect waves-dark p-r-20" href="{{ _url('/subscriptions') }}" aria-expanded="false"
                         target="_self">
                         <i class="sl-icon-layers"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.subscriptions')) }}
@@ -258,7 +258,7 @@
                 @if(config('visibility.modules.tickets'))
                 <li class="sidenav-menu-item {{ $page['mainmenu_tickets'] ?? '' }} menu-tooltip menu-with-tooltip"
                     title="{{ cleanLang(__('lang.tickets')) }}">
-                    <a class="waves-effect waves-dark" href="/tickets" aria-expanded="false" target="_self">
+                    <a class="waves-effect waves-dark" href="{{ _url('/tickets') }}" aria-expanded="false" target="_self">
                         <i class="ti-comments"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.support')) }}
                         </span>
@@ -273,7 +273,7 @@
                 <li data-modular-id="main_menu_team_knowledgebase"
                     class="sidenav-menu-item {{ $page['mainmenu_kb'] ?? '' }} menu-tooltip menu-with-tooltip"
                     title="{{ cleanLang(__('lang.knowledgebase')) }}">
-                    <a class="waves-effect waves-dark p-r-20" href="/knowledgebase" aria-expanded="false"
+                    <a class="waves-effect waves-dark p-r-20" href="{{ _url('/knowledgebase') }}" aria-expanded="false"
                         target="_self">
                         <i class="sl-icon-docs"></i>
                         <span class="hide-menu">{{ cleanLang(__('lang.knowledgebase')) }}
@@ -295,21 +295,21 @@
                     <ul aria-expanded="false" class="position-top collapse">
                         @if(config('visibility.modules.team'))
                         <li class="sidenav-submenu mainmenu_team {{ $page['submenu_team'] ?? '' }}" id="submenu_team">
-                            <a href="/team"
+                            <a href="{{ _url('/team') }}"
                                 class="{{ $page['submenu_team'] ?? '' }}">{{ cleanLang(__('lang.team_members')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.timesheets'))
                         <li class="sidenav-submenu mainmenu_timesheets {{ $page['submenu_timesheets'] ?? '' }}"
                             id="submenu_timesheets">
-                            <a href="/timesheets"
+                            <a href="{{ _url('/timesheets') }}"
                                 class="{{ $page['submenu_timesheets'] ?? '' }}">{{ cleanLang(__('lang.time_sheets')) }}</a>
                         </li>
                         @endif
                         @if(auth()->user()->is_admin)
                         <li class="sidenav-submenu mainmenu_settings {{ $page['submenu_settings'] ?? '' }}"
                             id="submenu_settings">
-                            <a href="/settings"
+                            <a href="{{ _url('/settings') }}"
                                 class="{{ $page['submenu_settings'] ?? '' }}">{{ cleanLang(__('lang.settings')) }}</a>
                         </li>
                         @endif
@@ -328,14 +328,14 @@
                     <ul aria-expanded="false" class="position-top collapse">
                         @if(config('visibility.modules.team'))
                         <li class="sidenav-submenu mainmenu_team {{ $page['submenu_team'] ?? '' }}" id="submenu_team">
-                            <a href="/team"
+                            <a href="{{ _url('/team') }}"
                                 class="{{ $page['submenu_team'] ?? '' }}">{{ cleanLang(__('lang.team_members')) }}</a>
                         </li>
                         @endif
                         @if(config('visibility.modules.timesheets'))
                         <li class="sidenav-submenu mainmenu_timesheets {{ $page['submenu_timesheets'] ?? '' }}"
                             id="submenu_timesheets">
-                            <a href="/timesheets"
+                            <a href="{{ _url('/timesheets') }}"
                                 class="{{ $page['submenu_timesheets'] ?? '' }}">{{ cleanLang(__('lang.time_sheets')) }}</a>
                         </li>
                         @endif

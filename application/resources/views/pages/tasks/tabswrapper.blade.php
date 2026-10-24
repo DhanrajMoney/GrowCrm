@@ -5,7 +5,7 @@
 <!--stats panel-->
 @if(auth()->user()->is_team)
 <div id="tasks-stats-wrapper" class="stats-wrapper card-embed-fix">
-    @if (@count($tasks) > 0) @include('misc.list-pages-stats') @endif
+    @if (_count($tasks ?? null) > 0) @include('misc.list-pages-stats') @endif
 </div>
 @endif
 <!--stats panel-->

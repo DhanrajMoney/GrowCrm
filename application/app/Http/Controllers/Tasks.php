@@ -366,6 +366,7 @@ class Tasks extends Controller {
         $payload = [
             'page' => $page,
             'boards' => $boards,
+            'tasks' => $this->taskrepo->search(),
             'milestones' => $milestones,
             'stats' => $stats,
             'tags' => $tags,
@@ -3425,7 +3426,8 @@ class Tasks extends Controller {
         //default values
         $stats = [];
 
-        foreach (config('task_statuses') as $status) {
+        $task_statuses = config('task_statuses') ?? \App\Models\TaskStatus::orderBy('taskstatus_position', 'ASC')->get();
+        foreach ($task_statuses as $status) {
             $stat = [
                 'value' => \App\Models\Task::where('task_status', $status->taskstatus_id)->count(),
                 'title' => runtimeLang($status->taskstatus_title),
