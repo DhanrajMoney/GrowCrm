@@ -19,6 +19,6 @@
     }
   },
   "require": {
-    "barryvdh/laravel-dompdf": "^0.8.5"
+    "barryvdh/laravel-dompdf": "^0.8.5 || ^2.0 || ^3.0"
   }
 }
