@@ -36,6 +36,11 @@ class Index {
                 'dashboard_section' => 'settings'
             ]);
 
+            //if direct browser GET request to settings sub-page (not ajax/json), redirect to app/{path} to render full layout
+            if (!$request->ajax() && !$request->wantsJson() && $request->isMethod('get') && !$request->is('settings') && !$request->is('app/*') && !$request->is('settings/updates/check*')) {
+                return redirect('app/' . $request->path());
+            }
+
             return $next($request);
         }
 

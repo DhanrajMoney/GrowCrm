@@ -386,8 +386,10 @@ $(document).ready(function () {
     $(document).on('click', '.js-dynamic-settings-url', function (e) {
         //set the dynamic url
         var self = $(this);
-        var url = self.attr('data-url');
-        var dynamic_url = 'app' + url;
+        var url = self.attr('data-url') || '';
+        var site_url = (typeof NX !== 'undefined' && NX.site_url) ? NX.site_url : '';
+        var clean_url = url.charAt(0) === '/' ? url : '/' + url;
+        var dynamic_url = site_url + '/app' + clean_url;
         self.attr('data-dynamic-url', dynamic_url);
         //update browser address bar
         NX.browserPushState($(this));

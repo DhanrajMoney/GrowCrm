@@ -22,8 +22,8 @@
             </div>
 
             <div class="m-t-20">
-                <a href="{{ url('/app/settings/updates') }}"
-                    class="btn btn-rounded-x btn-sm btn-danger waves-effect text-left">@lang('lang.check_for_updates')</a>
+                <a href="javascript:void(0);" data-url="/settings/updates"
+                    class="btn btn-rounded-x btn-sm btn-danger waves-effect text-left js-ajax-ux-request js-dynamic-settings-url">@lang('lang.check_for_updates')</a>
             </div>
             @endif
         </div>

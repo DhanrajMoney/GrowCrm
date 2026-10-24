@@ -266,7 +266,7 @@
                                 class="js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.general_settings')) }}</a>
                         </li>
                         <li><a class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url"
-                                id="settings-menu-categories-invoice" href="app/settings/invoices"
+                                id="settings-menu-categories-invoice" href="javascript:void(0);"
                                 data-url="/categories?filter_category_type=invoice&source=ext">{{ cleanLang(__('lang.categories')) }}
                             </a></li>
                     </ul>
@@ -617,7 +617,7 @@
                         <span class="hide-menu">{{ cleanLang(__('lang.other')) }}
                         </span>
                     </a>
-                    <ul aria-expanded="false" class="collapse" id="settings-menu-other">
+                    <ul aria-expanded="false" class="collapse">
                         <li><a href="javascript:void(0);" data-url="/settings/updates" id="settings-menu-other-updates"
                                 class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.updates')) }}</a>
                         </li>

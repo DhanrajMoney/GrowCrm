@@ -37,7 +37,7 @@
         <h3 class="text-warning"><i class="fa fa-exclamation-triangle"></i> {{ cleanLang(__('lang.warning')) }}</h3>
         {{ cleanLang(__('lang.purchase_code_could_not_be_confirmed')) }}
         <div>
-            <a href="{{ url('app/settings/general') }}">{{ cleanLang(__('lang.enter_product_code')) }}</a>
+            <a href="javascript:void(0);" data-url="/settings/general" class="js-ajax-ux-request js-dynamic-settings-url">{{ cleanLang(__('lang.enter_product_code')) }}</a>
         </div>
     </div>
 
